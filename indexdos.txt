@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SIAM 2026 · Simposio de Inteligencia Artificial en Machala</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tipografía profesional (Inter) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-slate-800">
+  
+  <!-- Aquí irá el NAVBAR y HERO -->
+    <header>
+        <!-- NAVBAR -->
+        <nav class="w-full bg-white/80 backdrop-blur-sm fixed top-0 left-0 z-50 shadow-sm border-b border-slate-200">
+          <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+
+            <!-- Logo -->
+            <div class="text-xl font-bold text-indigo-600">
+              SIAM 2026
+            </div>
+
+            <!-- Menu escritorio -->
+            <ul class="hidden lg:flex gap-6 text-sm font-medium text-slate-700">
+              <li><a href="#inicio" class="nav-link hover:text-indigo-600 transition" data-offset="80">Inicio</a></li>
+              <li><a href="#acerca" class="nav-link hover:text-indigo-600 transition">Acerca</a></li>
+              <li><a href="#comite" class="nav-link hover:text-indigo-600 transition">Comité</a></li>
+              <li><a href="#evento" class="nav-link hover:text-indigo-600 transition">Evento</a></li>
+              <li><a href="#lugar" class="nav-link hover:text-indigo-600 transition">Lugar</a></li>
+              <li><a href="#sponsors" class="nav-link hover:text-indigo-600 transition">Sponsors</a></li>
+            </ul>
+
+            <!-- Botón menú móvil -->
+            <button id="menuBtn" class="lg:hidden text-2xl text-slate-700 cursor-pointer">
+              ☰
+            </button>
+          </div>
+
+          <!-- MENÚ MÓVIL -->
+          <div id="mobileMenu" class="hidden lg:hidden bg-white border-t border-slate-200">
+            <ul class="flex flex-col py-3 text-sm text-slate-700">
+              <li><a href="#inicio" class="mobile-link block py-2 px-6 hover:bg-slate-100">Inicio</a></li>
+              <li><a href="#acerca" class="mobile-link block py-2 px-6 hover:bg-slate-100">Acerca</a></li>
+              <li><a href="#comite" class="mobile-link block py-2 px-6 hover:bg-slate-100">Comité</a></li>
+              <li><a href="#evento" class="mobile-link block py-2 px-6 hover:bg-slate-100">Evento</a></li>
+              <li><a href="#lugar" class="mobile-link block py-2 px-6 hover:bg-slate-100">Lugar</a></li>
+              <li><a href="#sponsors" class="mobile-link block py-2 px-6 hover:bg-slate-100">Sponsors</a></li>
+            </ul>
+          </div>
+        </nav>
+
+
+        <!-- HERO SECTION -->
+        <section id="inicio" class="min-h-screen flex flex-col items-center justify-center text-center px-6 pt-20">
+          <h1 class="fade-hero text-5xl md:text-6xl font-extrabold text-slate-900 mb-4"
+              data-aos="fade-up">
+            SIAM 2026
+          </h1>
+
+          <p class="fade-hero text-xl md:text-2xl text-slate-700" style="animation-delay: .15s">
+            Simposio de Inteligencia Artificial en Machala
+          </p>
+
+          <p class="fade-hero mt-4 text-lg text-indigo-600 font-semibold" style="animation-delay: .3s">
+            14 de mayo de 2026
+          </p>
+
+          <a class="fade-hero mt-8 px-8 py-3 bg-indigo-600 text-white rounded-full font-medium shadow-sm hover:bg-indigo-700 transition"
+            style="animation-delay: .45s">
+            Conoce más
+          </a>
+
+        </section>
+
+    </header>
+
+  <main>
+    <!-- SECCIÓN ACERCA DEL SIAM 2026 -->
+    <section id="acerca" class="max-w-5xl mx-auto px-6 py-24">
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6 text-center">
+        Acerca del SIAM 2026
+      </h2>
+
+      <p class="text-lg text-slate-700 leading-relaxed mb-4">
+        El SIAM 2026 es el Simposio de Inteligencia Artificial en Machala, un
+        evento académico y tecnológico que busca democratizar el acceso al
+        conocimiento en Inteligencia Artificial para estudiantes, docentes,
+        investigadores y profesionales del Ecuador.
+      </p>
+
+      <p class="text-lg text-slate-700 leading-relaxed mb-4">
+        Este evento reúne charlas, talleres, demostraciones y actividades formativas con el objetivo de fortalecer
+        las capacidades en IA en la región, crear redes de colaboración y promover el
+        desarrollo tecnológico local.
+      </p>
+
+      <p class="text-lg text-slate-700 leading-relaxed">
+        Nuestro propósito es impulsar una comunidad activa en IA desde Machala,
+        conectando la academia, el sector tecnológico y el talento emergente del país.
+      </p>
+    </section>
+  </main>
+
+
+  <!-- Footer irá aquí -->
+  <footer id="footer"></footer>
+
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Inicializar AOS
+    AOS.init({
+      duration: 800,
+      once: false, // permite animación repetida
+    });
+
+    // --- MENÚ MÓVIL ---
+    const menuBtn = document.querySelector("#menuBtn");
+    const mobileMenu = document.querySelector("#mobileMenu");
+
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    // Cerrar menú al elegir un link
+    document.querySelectorAll(".mobile-link").forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+      });
+    });
+
+    // --- REINICIAR AOS AL NAVEGAR ENTRE SECCIONES ---
+    document.querySelectorAll(".nav-link, .mobile-link").forEach(el => {
+      el.addEventListener("click", () => {
+        setTimeout(() => {
+          AOS.refreshHard();   // este SÍ reinicia animaciones duras
+        }, 300);
+      });
+    });
+    // Scroll compensado (para que AOS pueda reanimar)
+    document.querySelectorAll('a[data-offset]').forEach(link => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        const targetID = link.getAttribute("href");
+        const offset = parseInt(link.getAttribute("data-offset"), 10);
+
+        const element = document.querySelector(targetID);
+        const topPos = element.offsetTop - offset;
+
+        window.scrollTo({ top: topPos, behavior: "smooth" });
+
+        setTimeout(() => AOS.refreshHard(), 600);
+      });
+    });
+
+  });
+
+</script>
+
+</body>
+</html>
